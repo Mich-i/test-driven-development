@@ -31,4 +31,3 @@ test('formats seconds', () => {
   test('rounds seconds correctly', () => {
     expect(formatDuration(2.8)).toBe('3s');
   })
-  
