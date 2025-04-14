@@ -13,6 +13,11 @@ export function calcPoints(hits: string): number {
 }
 
 export function possibleCheckout(x: number): string {
-  console.log(x);
-  throw new Error("not implemented yet");
+  const rest = 501 - x;
+
+  if (rest > 40 || rest <= 0 || rest % 2 !== 0) {
+    return null;
+  }
+
+  return `Double ${rest / 2}`;
 }

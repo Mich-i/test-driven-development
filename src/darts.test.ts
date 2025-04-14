@@ -6,3 +6,9 @@ describe('calcPoints', () => {
     });
   });
   
+  describe('possibleCheckout', () => {
+    test('returns double for valid checkout', () => {
+      expect(possibleCheckout(477)).toBe('Double 12');
+    });
+  });
+  
