@@ -16,3 +16,15 @@ test('formats seconds', () => {
     expect(formatDuration(3600)).toBe('1h');
   });
   
+  test('formats complex hour-minute-second', () => {
+    expect(formatDuration(3999)).toBe('1h6m39s');
+  });
+  
+  test('formats zero seconds', () => {
+    expect(formatDuration(0)).toBe('0s');
+  });
+  
+  test('throws error for negative seconds', () => {
+    expect(() => formatDuration(-5)).toThrow('Seconds cannot be negative');
+  });
+  

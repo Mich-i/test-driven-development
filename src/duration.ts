@@ -1,4 +1,8 @@
 export function formatDuration(seconds: number): string {
+  if (seconds < 0) {
+    throw new Error('Seconds cannot be negative...')
+  }
+  
   const totalSeconds = Math.round(seconds);
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
