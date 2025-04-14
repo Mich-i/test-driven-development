@@ -17,3 +17,17 @@ describe('play - Rock Paper Scissors', () => {
         expect(play('paper', 'scissors')).toBe(2);
     });
 });
+
+describe('play - invalid moves', () => {
+    test('throws error when player 1 move is invalid', () => {
+        expect(() => play('banana', 'rock')).toThrow('Invalid...');
+    });
+    
+      test('throws error when player 2 move is invalid', () => {
+        expect(() => play('rock', 'lizard')).toThrow('Invalid...');
+    });
+    
+      test('throws error when both moves are invalid', () => {
+        expect(() => play('car', 'plane')).toThrow('Invalid...');
+    });
+});
