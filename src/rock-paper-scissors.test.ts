@@ -11,3 +11,7 @@ test('paper beats rock', () => {
 test('rock and rock is a draw', () => {
     expect(play('rock', 'rock')).toBe(0);
 })
+
+test('scissors beats paper', () => {
+    expect(play('scissors', 'paper')).toBe(1);
+})
