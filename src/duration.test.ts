@@ -28,3 +28,7 @@ test('formats seconds', () => {
     expect(() => formatDuration(-5)).toThrow('Seconds cannot be negative');
   });
   
+  test('rounds seconds correctly', () => {
+    expect(formatDuration(2.8)).toBe('3s');
+  })
+  
